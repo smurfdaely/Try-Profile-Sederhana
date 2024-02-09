@@ -18,14 +18,17 @@ footer {
   padding: 20px;
   color: white;
   background-color: #00a2c6;
+
   text-align: center;
   font-weight: bold;
 }
 
 nav a {
   font-size: 18px;
+
   font-weight: 400;
   text-decoration: none;
+
   color: white;
 }
 
@@ -40,6 +43,7 @@ nav a:hover {
 .featured-image {
   width: 100%;
   max-height: 300px;
+
   object-fit: cover;
   object-position: center;
 }
@@ -53,7 +57,6 @@ nav a:hover {
   border-radius: 5px;
 
   padding: 20px;
-  margin-top: 20px;
 }
 
 .jumbotron {
@@ -64,30 +67,64 @@ nav a:hover {
   color: white;
 }
 
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+
+  gap: 2rem;
+}
+
 nav li {
-  display: inline;
   list-style-type: none;
-  margin-right: 20px;
 }
 
 nav {
   background-color: #00a2c6;
   padding: 5px;
+
+  position: sticky;
+  top: 0;
 }
 
 main {
   padding: 20px;
-  overflow: auto;
+
+  display: flex;
+  gap: 1.5rem;
 }
 
 #content {
-  float: left;
-  width: 75%;
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
 }
 
 aside {
-  float: right;
-  width: 25%;
+  flex: 1;
+}
 
-  padding-left: 20px;
+header {
+  display: inline;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
 }
